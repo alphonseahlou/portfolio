@@ -95,6 +95,9 @@ body {
 nav {
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -232,29 +235,9 @@ footer {
         padding: 30px;
     }
 
-    nav {
-        position: relative; /* désactive sticky sur mobile */
-        overflow-x: auto;   /* scroll horizontal si besoin */
-    }
-
     nav ul {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        padding: 0 10px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        gap: 0;
-    }
-
-    nav li {
-        margin: 0 12px;
-        white-space: nowrap;
-    }
-
-    nav a {
-        padding: 12px 0;
-        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero h1 {
@@ -263,10 +246,6 @@ footer {
 
     .hero-subtitle {
         font-size: 16px;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
