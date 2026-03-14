@@ -19,10 +19,14 @@
 </header>
 
 <nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#projets">← Retour aux projets</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+        <span class="nav-logo">A. E. Ahlou</span>
+        <span class="icon">☰</span>
+    </button>
+    <ul id="main-nav">
+        <li><a href="index.html" onclick="closeNav()">Accueil</a></li>
+        <li><a href="index.html#projets" onclick="closeNav()">← Retour aux projets</a></li>
+        <li><a href="index.html#contact" onclick="closeNav()">Contact</a></li>
     </ul>
 </nav>
 
@@ -85,5 +89,18 @@
 </div>
 <footer><p>© 2026 Alphonse Euphrème Ahlou</p></footer>
 
+<script>
+function toggleNav(btn) {
+    const ul = document.getElementById('main-nav');
+    ul.classList.toggle('open');
+    btn.querySelector('.icon').textContent = ul.classList.contains('open') ? '✕' : '☰';
+}
+function closeNav() {
+    const ul = document.getElementById('main-nav');
+    ul.classList.remove('open');
+    const icon = document.querySelector('.nav-toggle .icon');
+    if (icon) icon.textContent = '☰';
+}
+</script>
 </body>
 </html>

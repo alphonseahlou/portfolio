@@ -40,14 +40,18 @@
 
 <!-- ===== NAVIGATION ===== -->
 <nav>
-    <ul>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#memoires">Mémoires</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+        <span class="nav-logo">A. E. Ahlou</span>
+        <span class="icon">☰</span>
+    </button>
+    <ul id="main-nav">
+        <li><a href="#apropos" onclick="closeNav()">À propos</a></li>
+        <li><a href="#competences" onclick="closeNav()">Compétences</a></li>
+        <li><a href="#projets" onclick="closeNav()">Projets</a></li>
+        <li><a href="#memoires" onclick="closeNav()">Mémoires</a></li>
+        <li><a href="#articles" onclick="closeNav()">Articles</a></li>
+        <li><a href="#services" onclick="closeNav()">Services</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
     </ul>
 </nav>
 
@@ -323,7 +327,7 @@
         <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <p><a href="mailto:ahlou9@gmail.com">ahlou9@gmail.com</a></p>
+            <p><a href="/cdn-cgi/l/email-protection#84e5ece8ebf1bdc4e3e9e5ede8aae7ebe9"><span class="__cf_email__" data-cfemail="f7969f9b9882ceb7909a969e9bd994989a">[email&#160;protected]</span></a></p>
         </div>
 
         <div class="contact-card">
@@ -364,13 +368,4 @@
     <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>
 </footer>
 
-<script>
-function toggleAbstract(id, btn) {
-    const el = document.getElementById(id);
-    el.classList.toggle('open');
-    btn.textContent = el.classList.contains('open') ? 'Réduire ↑' : 'Lire plus ↓';
-}
-</script>
-
-</body>
-</html>
+<
