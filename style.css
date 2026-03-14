@@ -212,6 +212,12 @@ nav {
     color: var(--navy);
 }
 
+.nav-toggle .icon {
+    font-size: 18px;
+    color: var(--navy);
+    pointer-events: none;
+}
+
 nav ul {
     list-style: none;
     margin: 0;

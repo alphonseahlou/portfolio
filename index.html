@@ -42,7 +42,7 @@
 <nav>
     <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
         <span class="nav-logo">A. E. Ahlou</span>
-        <span class="icon">☰</span>
+        <i class="icon fas fa-bars"></i>
     </button>
     <ul id="main-nav">
         <li><a href="#apropos" onclick="closeNav()">À propos</a></li>
@@ -367,5 +367,31 @@
 <footer>
     <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>
 </footer>
+<script>
+function toggleNav(btn) {
+    var ul = document.getElementById('main-nav');
+    ul.classList.toggle('open');
+    var icon = btn.querySelector('.icon');
+    if (ul.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+}
+function closeNav() {
+    var ul = document.getElementById('main-nav');
+    if (ul) ul.classList.remove('open');
+    var icon = document.querySelector('.nav-toggle .icon');
+    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+}
+function toggleAbstract(id, btn) {
+    var el = document.getElementById(id);
+    el.classList.toggle('open');
+    btn.textContent = el.classList.contains('open') ? 'Reduire' : 'Lire plus';
+}
+</script>
 
-<
+</body>
+</html>
