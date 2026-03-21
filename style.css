@@ -136,6 +136,10 @@ ul { padding-left: 20px; }
 /* Boutons */
 .hero-buttons { margin-top: 10px; }
 
+.hero-subpage {
+    padding: 70px 20px 80px;
+}
+
 .btn-primary,
 .btn-secondary {
     padding: 13px 30px;
