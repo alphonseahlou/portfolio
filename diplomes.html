@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplômes – Alphonse Euphrème Ahlou</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header class="hero hero-subpage">
+    <div class="hero-content">
+        <h1>Diplômes</h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">Parcours académique et qualifications</p>
+    </div>
+</header>
+
+<nav>
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+        <span class="nav-logo">A. E. Ahlou</span>
+        <i class="icon fas fa-bars"></i>
+    </button>
+    <ul id="main-nav">
+        <li><a href="index.html" onclick="closeNav()">Accueil</a></li>
+        <li><a href="index.html#memoires" onclick="closeNav()">← Mémoires</a></li>
+        <li><a href="formation-continue.html" onclick="closeNav()">Formation continue</a></li>
+        <li><a href="index.html#contact" onclick="closeNav()">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="timeline">
+
+    <div class="timeline-item">
+        <h3>Maîtrise en gestion de projet</h3>
+        <p>
+            <strong>Université :</strong> Université du Québec à Rimouski<br>
+            <strong>Lieu :</strong> Rimouski, Canada<br>
+            <strong>Année :</strong> 2025<br>
+            <strong>Cote :</strong> 4,03/4,3
+        </p>
+        <p>
+            Maîtrise spécialisée en gestion de projet avec un focus sur les projets de coopération internationale
+            et de développement durable. Mémoire sur la capitalisation des expériences dans les projets de coopération.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>Master en santé publique internationale</h3>
+        <p>
+            <strong>Université :</strong> Université Senghor d'Alexandrie<br>
+            <strong>Lieu :</strong> Alexandrie, Égypte<br>
+            <strong>Année :</strong> 2021<br>
+            <strong>Mention :</strong> Excellente (4,344/4,3)
+        </p>
+        <p>
+            Master en santé publique internationale avec spécialisation en suivi-évaluation de projets.
+            Mémoire sur la qualité de mise en œuvre des services de santé sexuelle et reproductive au Niger.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>
+</footer>
+<script>
+function toggleNav(btn) {
+    var ul = document.getElementById('main-nav');
+    ul.classList.toggle('open');
+    var icon = btn.querySelector('.icon');
+    if (ul.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+}
+function closeNav() {
+    var ul = document.getElementById('main-nav');
+    if (ul) ul.classList.remove('open');
+    var icon = document.querySelector('.nav-toggle .icon');
+    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+}
+</script>
+
+</body>
+</html>
