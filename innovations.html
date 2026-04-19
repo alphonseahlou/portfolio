@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Innovations en santé publique et solutions digitales d'Alphonse Euphrème Ahlou.">
     <title>Innovations – Alphonse Euphrème Ahlou</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+<main>
 
-<header class="hero" style="padding:70px 20px 80px;">
+<header class="hero hero-subpage">
     <div class="hero-content">
         <h1>Innovations</h1>
         <div class="hero-divider"></div>
@@ -19,7 +25,7 @@
 </header>
 
 <nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
         <span class="nav-logo">A. E. Ahlou</span>
         <i class="icon fas fa-bars"></i>
     </button>
@@ -80,24 +86,13 @@
 
 </section>
 
+</main>
+
 <div class="visit-counter">
     <span>👁 Visites : </span>
     <img src="https://aahlou.goatcounter.com/counter/%2Finnovations.svg" alt="Nombre de visites">
 </div>
 <footer><p>© 2026 Alphonse Euphrème Ahlou</p></footer>
 
-<script>
-function toggleNav(btn) {
-    const ul = document.getElementById('main-nav');
-    ul.classList.toggle('open');
-    btn.querySelector('.icon').textContent = ul.classList.contains('open') ? '✕' : '☰';
-}
-function closeNav() {
-    const ul = document.getElementById('main-nav');
-    ul.classList.remove('open');
-    const icon = document.querySelector('.nav-toggle .icon');
-    if (icon) icon.textContent = '☰';
-}
-</script>
 </body>
 </html>

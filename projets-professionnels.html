@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets professionnels et missions terrain d'Alphonse Euphrème Ahlou.">
     <title>Projets Professionnels – Alphonse Euphrème Ahlou</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+<main>
 
-<header class="hero" style="padding:70px 20px 80px;">
+<header class="hero hero-subpage">
     <div class="hero-content">
         <h1>Projets Professionnels</h1>
         <div class="hero-divider"></div>
@@ -19,7 +25,7 @@
 </header>
 
 <nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
         <span class="nav-logo">A. E. Ahlou</span>
         <i class="icon fas fa-bars"></i>
     </button>
@@ -46,13 +52,10 @@
             complet (échantillonnage, guides, matrices d'analyse), coordination des enquêteurs et
             partenaires locaux, collecte et interprétation des données de suivi-évaluation pour rapports ACDI.
         </p>
-           <a href=https://fondationpgl.ca/projets/passrel/" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Voir le projet officiel
-        </a>
     </div>
 
     <div class="timeline-item">
-        <h3>Superviseur – Mobilisation communautaire &amp; qualité des services &amp; Santé communautaire</h3>
+        <h3>Superviseur – Mobilisation communautaire &amp; qualité des services</h3>
         <p>
             <strong>Organisation :</strong> Mouvement Rural de la Jeunesse Chrétienne<br>
             <strong>Pays :</strong> Bénin<br>
@@ -65,9 +68,6 @@
             en temps réel. Organisation de focus groups et enquêtes de satisfaction (baromètre ICAP).
             Production de rapports analytiques pour les autorités sanitaires et partenaires techniques.
         </p>
-           <a href="https://open.enabel.be/fr/BEN/2389/1004/u/equite-ensemble-pour-une-qualite-des-soins-inclusive-et-transparente-orientee-vers-l-egalite-genre.html" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Voir le projet officiel
-        </a>
     </div>
 
     <div class="timeline-item">
@@ -84,7 +84,7 @@
             satisfaction. Mentorat clinique et organisationnel auprès du personnel de santé.
             Rédaction de rapports techniques destinés aux bailleurs.
         </p>
-        <a href="https://solthis.org/fr/projet/jades/" target="_blank">
+        <a href="https://solthis.org/fr/projet/jades/" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Voir le projet officiel
         </a>
     </div>
@@ -103,12 +103,11 @@
             grossesses précoces. Collaboration avec les acteurs locaux intervenant sur la santé des
             adolescents et jeunes.
         </p>
-           <a href="https://abmsbj.org/amour-vie/" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Voir le projet officiel
-        </a>
     </div>
 
 </section>
+
+</main>
 
 <div class="visit-counter">
     <span>👁 Visites : </span>
@@ -116,18 +115,5 @@
 </div>
 <footer><p>© 2026 Alphonse Euphrème Ahlou</p></footer>
 
-<script>
-function toggleNav(btn) {
-    const ul = document.getElementById('main-nav');
-    ul.classList.toggle('open');
-    btn.querySelector('.icon').textContent = ul.classList.contains('open') ? '✕' : '☰';
-}
-function closeNav() {
-    const ul = document.getElementById('main-nav');
-    ul.classList.remove('open');
-    const icon = document.querySelector('.nav-toggle .icon');
-    if (icon) icon.textContent = '☰';
-}
-</script>
 </body>
 </html>

@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diplômes et parcours académique d'Alphonse Euphrème Ahlou.">
     <title>Diplômes – Alphonse Euphrème Ahlou</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+<main>
 
 <header class="hero hero-subpage">
     <div class="hero-content">
@@ -19,7 +25,7 @@
 </header>
 
 <nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
         <span class="nav-logo">A. E. Ahlou</span>
         <i class="icon fas fa-bars"></i>
     </button>
@@ -60,44 +66,13 @@
             Mémoire sur la qualité de mise en œuvre des services de santé sexuelle et reproductive au Niger.
         </p>
     </div>
-     <div class="timeline-item">
-        <h3>Master en santé publique internationale</h3>
-        <p>
-            <strong>Université :</strong> Université d'Abomey-calavi (Institut National Médico-Sanitaire<br>
-            <strong>Lieu :</strong> Cotonou, Bénin<br>
-            <strong>Année :</strong> 2015<br>
-            <strong>Mention :</strong> Bien
-        </p>
-        <p>
-            Licence professionnelle en sciences infirmières et obstétricales
-        </p>
-    </div>
 
 </section>
+
+</main>
 
 <footer>
     <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>
 </footer>
-<script>
-function toggleNav(btn) {
-    var ul = document.getElementById('main-nav');
-    ul.classList.toggle('open');
-    var icon = btn.querySelector('.icon');
-    if (ul.classList.contains('open')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-}
-function closeNav() {
-    var ul = document.getElementById('main-nav');
-    if (ul) ul.classList.remove('open');
-    var icon = document.querySelector('.nav-toggle .icon');
-    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
-}
-</script>
-
 </body>
 </html>

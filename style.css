@@ -2,8 +2,6 @@
 /* === PORTFOLIO - ALPHONSE EUPHRÈME AHLOU ==== */
 /* ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
-
 :root {
     --navy:      #0a1f44;
     --blue:      #1e3a8a;
@@ -266,7 +264,8 @@ nav a:hover {
     }
 
     nav ul.open {
-        max-height: 500px;
+        /* Agrandit le menu mobile pour éviter les coupures si le menu devient long */
+        max-height: 90vh;
     }
 
     nav li { margin: 0; }

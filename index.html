@@ -4,20 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Alphonse Euphrème Ahlou – expert en santé publique, suivi-évaluation et coopération internationale.">
+    <meta property="og:title" content="Alphonse Euphrème Ahlou – Expert en santé publique">
+    <meta property="og:description" content="Portfolio professionnel : 8+ ans d'expérience, publications scientifiques, projets internationaux en santé publique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alphonseahlou.github.io/portfolio/">
+    <meta property="og:image" content="https://alphonseahlou.github.io/portfolio/photo.jpeg">
     <title>Portfolio - Alphonse Euphrème Ahlou</title>
-    <meta name="description" content="Portfolio d'Alphonse Euphrème Ahlou – Expert en santé publique, évaluation de projets et coopération internationale.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
+<main>
 
 <!-- ===== HERO ===== -->
 <header class="hero">
     <div class="hero-content">
 
-        <img src="photo.jpeg" alt="Photo professionnelle d'Alphonse Euphrème Ahlou" class="photo-profil">
+        <img src="photo.jpeg" alt="Photo professionnelle d'Alphonse Euphrème Ahlou" class="photo-profil" loading="lazy" decoding="async">
 
         <h1>Alphonse Euphrème Ahlou</h1>
         <div class="hero-divider"></div>
@@ -27,7 +37,7 @@
         </p>
 
         <div class="hero-buttons">
-            <a href="cv.pdf" class="btn-primary" target="_blank">
+            <a href="cv.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-file-download"></i> Télécharger mon CV
             </a>
             <a href="#contact" class="btn-secondary">
@@ -40,7 +50,7 @@
 
 <!-- ===== NAVIGATION ===== -->
 <nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
         <span class="nav-logo">A. E. Ahlou</span>
         <i class="icon fas fa-bars"></i>
     </button>
@@ -49,8 +59,8 @@
         <li><a href="#competences" onclick="closeNav()">Compétences</a></li>
         <li><a href="#projets" onclick="closeNav()">Projets</a></li>
         <li><a href="#memoires" onclick="closeNav()">Mémoires</a></li>
-        <li><a href="diplomes.html" target="_blank" onclick="closeNav()">Diplômes</a></li>
-        <li><a href="formation-continue.html" target="_blank" onclick="closeNav()">Formation continue</a></li>
+        <li><a href="diplomes.html" target="_blank" rel="noopener noreferrer" onclick="closeNav()">Diplômes</a></li>
+        <li><a href="formation-continue.html" target="_blank" rel="noopener noreferrer" onclick="closeNav()">Formation continue</a></li>
         <li><a href="#articles" onclick="closeNav()">Articles</a></li>
         <li><a href="#services" onclick="closeNav()">Services</a></li>
         <li><a href="#contact" onclick="closeNav()">Contact</a></li>
@@ -192,10 +202,10 @@
         <div class="card-abstract" id="abs-m1">
             Cette étude évalue la qualité de mise en œuvre des services de santé sexuelle et reproductive (SSR) par le Projet JADES 2 au Niger. Menée auprès de 203 adolescents et 9 agents de santé dans 9 centres, elle mobilise l'indicateur composite de l'OMS et la théorie de Donabedian. Le score de qualité obtenu est de 67 % (acceptable). La majorité des bénéficiaires (56 %) sont très satisfaits. Les principaux facteurs de satisfaction sont la brièveté du temps d'attente (OR=4,63) et le respect du choix du patient. Des lacunes sont relevées sur la confidentialité et la disponibilité des intrants.
         </div>
-        <button class="toggle-abstract" onclick="toggleAbstract('abs-m1', this)">Lire plus ↓</button>
+        <button class="toggle-abstract" onclick="toggleAbstract('abs-m1', this)" aria-expanded="false">Lire plus ↓</button>
 
         <br>
-        <a href="https://dicames.online/jspui/bitstream/20.500.12177/7966/1/AlphonseAhlou.pdf" target="_blank">
+        <a href="https://dicames.online/jspui/bitstream/20.500.12177/7966/1/AlphonseAhlou.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter le mémoire
         </a>
     </div>
@@ -213,10 +223,10 @@
         <div class="card-abstract" id="abs-m2">
             Ce mémoire analyse les mécanismes de capitalisation des expériences dans deux projets de coopération (santé et éducation) menés au Bénin, en Haïti et au Canada, impliquant 14 acteurs. L'approche qualitative abductive avec codage via NVivo 14 révèle deux postures opposées : dans le Projet A, la capitalisation est perçue comme une formalité administrative; dans le Projet B, elle est intégrée de façon participative et stratégique. Les résultats soulignent le besoin de dispositifs organisationnels dédiés et d'une meilleure restitution aux bénéficiaires.
         </div>
-        <button class="toggle-abstract" onclick="toggleAbstract('abs-m2', this)">Lire plus ↓</button>
+        <button class="toggle-abstract" onclick="toggleAbstract('abs-m2', this)" aria-expanded="false">Lire plus ↓</button>
 
         <br>
-        <a href="https://semaphore.uqar.ca/id/eprint/3353/" target="_blank">
+        <a href="https://semaphore.uqar.ca/id/eprint/3353/" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter le mémoire
         </a>
     </div>
@@ -238,10 +248,10 @@
         <div class="card-abstract" id="abs-a1">
             Étude transversale évaluative de la qualité des services SSR du projet JADES 2 au Niger (2021). Sur 203 adolescents et 9 prestataires dans 9 centres de santé, le score de qualité est estimé à 67 % (acceptable). La majorité des bénéficiaires sont satisfaits et 65 % connaissent au moins 2 méthodes de prévention des IST. Des lacunes persistent sur la confidentialité et la disponibilité des médicaments.
         </div>
-        <button class="toggle-abstract" onclick="toggleAbstract('abs-a1', this)">Lire plus ↓</button>
+        <button class="toggle-abstract" onclick="toggleAbstract('abs-a1', this)" aria-expanded="false">Lire plus ↓</button>
 
         <br>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11161698/" target="_blank">
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11161698/" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter l'article
         </a>
     </div>
@@ -258,10 +268,10 @@
         <div class="card-abstract" id="abs-a2">
             À partir des données EDS 2017-2018 au Bénin, cette étude analyse l'effet de l'indice de richesse du ménage sur l'utilisation de la contraception moderne chez les femmes en âge de procréer. Les régressions linéaires montrent un effet significatif et persistant de la richesse, même après contrôle de l'âge, de l'éducation et de la religion du partenaire. Ces résultats plaident pour des interventions combinant volets économiques et éducatifs.
         </div>
-        <button class="toggle-abstract" onclick="toggleAbstract('abs-a2', this)">Lire plus ↓</button>
+        <button class="toggle-abstract" onclick="toggleAbstract('abs-a2', this)" aria-expanded="false">Lire plus ↓</button>
 
         <br>
-        <a href="https://www.researchgate.net/publication/392132353" target="_blank">
+        <a href="https://www.researchgate.net/publication/392132353" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter l'article
         </a>
     </div>
@@ -278,10 +288,10 @@
         <div class="card-abstract" id="abs-a3">
             Revue de 30 articles (PubMed, Google Scholar, Academia) sur le rôle du dossier patient informatisé dans les systèmes d'information cliniques. L'analyse montre que le couplage données-connaissances (ex. : guides de bonnes pratiques) améliore la qualité de la prise en charge. L'interopérabilité et le respect des standards demeurent des conditions essentielles pour exploiter pleinement ces systèmes.
         </div>
-        <button class="toggle-abstract" onclick="toggleAbstract('abs-a3', this)">Lire plus ↓</button>
+        <button class="toggle-abstract" onclick="toggleAbstract('abs-a3', this)" aria-expanded="false">Lire plus ↓</button>
 
         <br>
-        <a href="https://www.researchgate.net/publication/381224489" target="_blank">
+        <a href="https://www.researchgate.net/publication/381224489" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter l'article
         </a>
     </div>
@@ -324,39 +334,44 @@
 <section id="contact" class="contact-section">
     <h2>Contactez-moi</h2>
 
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <i class="fab fa-youtube"></i>
+            <h3>Youtube</h3>
+            <p><a href="https://www.youtube.com/@euphreme_Vezo?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Voir la chaîne</a></p>
+        </div>
+
         <div class="contact-card">
             <i class="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
-            <p><a href="https://www.linkedin.com/in/ahlou2/" target="_blank">Voir mon profil</a></p>
+            <p><a href="https://www.linkedin.com/in/ahlou2/" target="_blank" rel="noopener noreferrer">Voir mon profil</a></p>
         </div>
 
         <div class="contact-card">
             <i class="fab fa-orcid"></i>
             <h3>ORCID</h3>
-            <p><a href="https://orcid.org/0009-0007-2146-6167" target="_blank">0009-0007-2146-6167</a></p>
-        </div>
-            <div class="contact-card">
-            <i class="fab fa-youtube"></i>
-            <h3>YouTube</h3>
-            <p><a href="https://www.youtube.com/@euphreme_Vezo" target="_blank">Voir ma chaîne</a></p>
+            <p><a href="https://orcid.org/0009-0007-2146-6167" target="_blank" rel="noopener noreferrer">0009-0007-2146-6167</a></p>
         </div>
 
         <div class="contact-card">
             <i class="fas fa-graduation-cap"></i>
             <h3>Google Scholar</h3>
-            <p><a href="https://scholar.google.com/citations?user=ZA_YzaYAAAAJ&hl=fr" target="_blank">Voir mon profil</a></p>
+            <p><a href="https://scholar.google.com/citations?user=ZA_YzaYAAAAJ&hl=fr" target="_blank" rel="noopener noreferrer">Voir mon profil</a></p>
         </div>
 
         <div class="contact-card">
             <i class="fab fa-facebook"></i>
             <h3>Facebook</h3>
-            <p><a href="https://www.facebook.com/euphreme.ahlou" target="_blank">Voir mon profil</a></p>
+            <p><a href="https://www.facebook.com/euphreme.ahlou" target="_blank" rel="noopener noreferrer">Voir mon profil</a></p>
         </div>
 
     </div>
 </section>
 
 <!-- COMPTEUR DE VISITES -->
+</main>
+
 <div class="visit-counter">
     <span>👁 Visites : </span>
     <img src="https://aahlou.goatcounter.com/counter/%2F.svg"
@@ -366,31 +381,5 @@
 <footer>
     <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>
 </footer>
-<script>
-function toggleNav(btn) {
-    var ul = document.getElementById('main-nav');
-    ul.classList.toggle('open');
-    var icon = btn.querySelector('.icon');
-    if (ul.classList.contains('open')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-}
-function closeNav() {
-    var ul = document.getElementById('main-nav');
-    if (ul) ul.classList.remove('open');
-    var icon = document.querySelector('.nav-toggle .icon');
-    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
-}
-function toggleAbstract(id, btn) {
-    var el = document.getElementById(id);
-    el.classList.toggle('open');
-    btn.textContent = el.classList.contains('open') ? 'Reduire' : 'Lire plus';
-}
-</script>
-
 </body>
 </html>

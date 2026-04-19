@@ -1,0 +1,12 @@
+# Fichier robots.txt — guide pour les moteurs de recherche
+# Dit à Google, Bing, etc. comment accéder à ton site
+
+User-agent: *
+Allow: /
+Disallow: 
+
+# Sitemap location — indique où trouver la liste complète des pages
+Sitemap: https://alphonseahlou.github.io/portfolio/sitemap.xml
+
+# Crawl-delay — temps d'attente entre deux requêtes (en secondes)
+Crawl-delay: 1

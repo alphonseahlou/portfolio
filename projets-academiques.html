@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets académiques et mémoires d'Alphonse Euphrème Ahlou.">
     <title>Projets Académiques – Alphonse Euphrème Ahlou</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+<main>
 
 <header class="hero" style="padding:70px 20px 80px;">
     <div class="hero-content">
@@ -19,7 +25,7 @@
 </header>
 
 <nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
         <span class="nav-logo">A. E. Ahlou</span>
         <i class="icon fas fa-bars"></i>
     </button>
@@ -49,7 +55,7 @@
             bénéficiaires). Identification des conditions d'efficacité de la capitalisation et recommandations
             pour l'apprentissage organisationnel.
         </p>
-        <a href="https://semaphore.uqar.ca/id/eprint/3353/" target="_blank">
+        <a href="https://semaphore.uqar.ca/id/eprint/3353/" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter le mémoire
         </a>
     </div>
@@ -92,7 +98,7 @@
             Utilisation de l'indicateur composite OMS et de la théorie de Donabedian &amp; Bruce.
             Score de qualité : 67 % – services de qualité acceptable.
         </p>
-        <a href="https://dicames.online/jspui/bitstream/20.500.12177/7966/1/AlphonseAhlou.pdf" target="_blank">
+        <a href="https://dicames.online/jspui/bitstream/20.500.12177/7966/1/AlphonseAhlou.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-external-link-alt"></i> Consulter le mémoire
         </a>
     </div>
@@ -138,24 +144,13 @@
 
 </section>
 
+</main>
+
 <div class="visit-counter">
     <span>👁 Visites : </span>
     <img src="https://aahlou.goatcounter.com/counter/%2Fprojets-academiques.svg" alt="Nombre de visites">
 </div>
 <footer><p>© 2026 Alphonse Euphrème Ahlou</p></footer>
 
-<script>
-function toggleNav(btn) {
-    const ul = document.getElementById('main-nav');
-    ul.classList.toggle('open');
-    btn.querySelector('.icon').textContent = ul.classList.contains('open') ? '✕' : '☰';
-}
-function closeNav() {
-    const ul = document.getElementById('main-nav');
-    ul.classList.remove('open');
-    const icon = document.querySelector('.nav-toggle .icon');
-    if (icon) icon.textContent = '☰';
-}
-</script>
 </body>
 </html>
