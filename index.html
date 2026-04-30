@@ -9,8 +9,10 @@
     <meta property="og:description" content="Portfolio professionnel : 8+ ans d'expérience, publications scientifiques, projets internationaux en santé publique.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alphonseahlou.github.io/portfolio/">
-    <meta property="og:image" content="https://alphonseahlou.github.io/portfolio/photo.jpeg">
+    <meta property="og:image" content="https://alphonseahlou.github.io/portfolio/photo.jpg">
     <meta name="google-site-verification" content="CFvNpnEF_vB_awwuY7uMF-tYNa8i6jqBNklt-OZzLF4" />
+    <meta name="theme-color" content="#0a1f44">
+    <link rel="canonical" href="https://alphonseahlou.github.io/portfolio/">
     <title>Portfolio - Alphonse Euphrème Ahlou</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -19,6 +21,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alphonse Euphrème Ahlou",
+      "url": "https://alphonseahlou.github.io/portfolio/",
+      "image": "https://alphonseahlou.github.io/portfolio/photo.jpg",
+      "jobTitle": "Expert en santé publique et gestion de projets internationaux",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Université du Québec à Rimouski" },
+        { "@type": "CollegeOrUniversity", "name": "Université Senghor d'Alexandrie" }
+      ],
+      "knowsAbout": ["Santé publique", "Suivi-évaluation", "Coopération internationale", "Analyse de données"],
+      "sameAs": [
+        "https://www.linkedin.com/in/ahlou2/",
+        "https://orcid.org/0009-0007-2146-6167",
+        "https://scholar.google.com/citations?user=ZA_YzaYAAAAJ&hl=fr"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -28,7 +50,7 @@
 <header class="hero">
     <div class="hero-content">
 
-        <img src="photo.jpg" alt="Photo professionnelle d'Alphonse Euphrème Ahlou" class="photo-profil" loading="lazy" decoding="async">
+        <img src="photo.jpg" alt="Photo professionnelle d'Alphonse Euphrème Ahlou" class="photo-profil" fetchpriority="high" decoding="async">
 
         <h1>Alphonse Euphrème Ahlou</h1>
         <div class="hero-divider"></div>
@@ -44,6 +66,11 @@
             <a href="#contact" class="btn-secondary">
                 <i class="fas fa-envelope"></i> Me contacter
             </a>
+        </div>
+
+        <div class="disponible-badge">
+            <span class="disponible-dot"></span>
+            Disponible pour missions
         </div>
 
     </div>
@@ -368,6 +395,14 @@
         </div>
 
     </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xpwzkgly" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required autocomplete="name">
+        <input type="email" name="email" placeholder="Votre adresse e-mail" required autocomplete="email">
+        <input type="text" name="subject" placeholder="Sujet">
+        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer le message</button>
+    </form>
 </section>
 
 <!-- COMPTEUR DE VISITES -->
@@ -378,6 +413,8 @@
     <img src="https://aahlou.goatcounter.com/counter.svg"
          alt="Nombre de visites">
 </div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">&#8679;</button>
 
 <footer>
     <p>© 2026 Alphonse Euphrème Ahlou &nbsp;·&nbsp; Tous droits réservés</p>

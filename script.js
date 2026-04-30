@@ -44,4 +44,47 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.toggle-abstract').forEach(function (btn) {
         btn.setAttribute('aria-expanded', 'false');
     });
+
+    initBackToTop();
+    initActiveNav();
 });
+
+// Bouton retour en haut
+function initBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Mise en évidence du lien nav correspondant à la section visible (index.html uniquement)
+function initActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    if (!sections.length) return;
+
+    const navLinks = document.querySelectorAll('#main-nav a[href^="#"], #main-nav a[href*="index.html#"]');
+    if (!navLinks.length) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(function (link) {
+                const href = link.getAttribute('href') || '';
+                const sectionId = href.split('#')[1];
+                link.classList.toggle('active', sectionId === entry.target.id);
+            });
+        });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(function (s) { observer.observe(s); });
+}
