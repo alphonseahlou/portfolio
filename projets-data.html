@@ -1,138 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projets data, analyses statistiques et tableaux de bord d'Alphonse Euphrème Ahlou.">
-    <meta name="google-site-verification" content="CFvNpnEF_vB_awwuY7uMF-tYNa8i6jqBNklt-OZzLF4" />
-    <meta property="og:title" content="Projets Data – Alphonse Euphrème Ahlou">
-    <meta property="og:description" content="Analyses statistiques, visualisation de données et dashboards décisionnels par Alphonse Euphrème Ahlou.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alphonseahlou.github.io/portfolio/projets-data.html">
-    <meta property="og:image" content="https://alphonseahlou.github.io/portfolio/photo.jpg">
-    <meta name="theme-color" content="#0a1f44">
-    <link rel="canonical" href="https://alphonseahlou.github.io/portfolio/projets-data.html">
-    <title>Projets Data – Alphonse Euphrème Ahlou</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets data – Alphonse Euphrème Ahlou</title>
+  <meta name="description" content="Analyses statistiques, visualisation de données et dashboards décisionnels d'Alphonse Euphrème Ahlou.">
+  <meta property="og:title" content="Projets data – Alphonse Euphrème Ahlou">
+  <meta property="og:url" content="https://alphonseahlou.github.io/portfolio/projets-data.html">
+  <meta property="og:image" content="https://alphonseahlou.github.io/portfolio/photo.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://alphonseahlou.github.io/portfolio/projets-data.html">
+  <meta name="theme-color" content="#17324d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
-<header class="hero hero-subpage">
-    <div class="hero-content">
-        <h1>Projets Data</h1>
-        <div class="hero-divider"></div>
-        <p class="hero-subtitle">Analyses statistiques, visualisation et développement de solutions décisionnelles</p>
+  <header class="site-header">
+    <div class="govbar">
+      <div class="container govbar-inner">
+        <span>Portfolio professionnel</span>
+        <span>Santé publique · Évaluation · Coopération internationale</span>
+      </div>
     </div>
-</header>
-
-<nav>
-    <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
-        <span class="nav-logo">A. E. Ahlou</span>
-        <i class="icon fas fa-bars"></i>
-    </button>
-    <ul id="main-nav">
-        <li><a href="index.html" onclick="closeNav()">Accueil</a></li>
-        <li><a href="index.html#projets" onclick="closeNav()">← Retour aux projets</a></li>
-        <li><a href="index.html#contact" onclick="closeNav()">Contact</a></li>
-    </ul>
-</nav>
-
-<nav class="breadcrumb" aria-label="Fil d'Ariane">
-    <a href="index.html">Accueil</a>
-    <span class="sep">›</span>
-    <a href="index.html#projets">Projets</a>
-    <span class="sep">›</span>
-    <span class="current">Projets Data</span>
-</nav>
-
-<section class="timeline">
-    <div class="timeline-item">
-    <h3>Conception de formulaire de collecte de données – KoboToolbox</h3>
-    <p>
-        <strong>Source :</strong> KoboToolbox<br>
-        <strong>Lien direct :</strong> <a href="https://ee.kobotoolbox.org/x/FDbgAPzV" target="_blank" rel="noopener noreferrer">Ouvrir le formulaire</a>
-    </p>
-    <p>
-       Ce formulaire est à titre illustratif des formulaire professionnelles que je peux concevoir sur Kobotolbox. Veuillez remplir le formulaire ci-dessous. Tous les champs marqués sont obligatoires.
-    </p>
-    <iframe
-        src="https://ee.kobotoolbox.org/x/FDbgAPzV"
-        width="100%"
-        height="600"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Chargement...
-    </iframe>
+    <div class="brand-compact container">
+      <a class="brand-mark" href="index.html" aria-label="Accueil">
+        <span class="brand-symbol">AEA</span>
+        <span>
+          <strong>Alphonse Euphrème Ahlou</strong>
+          <small>Expert en santé publique internationale</small>
+        </span>
+      </a>
     </div>
+    <nav class="main-nav" aria-label="Navigation">
+      <div class="container nav-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#projets">← Retour aux projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <div class="timeline-item">
-        <h3>Analyse statistique des indicateurs SSR – Niger</h3>
-        <p>
-            <strong>Rôle :</strong> Data Analyst<br>
-            <strong>Pays :</strong> Niger<br>
-            <strong>Outils :</strong> R, Python, Power BI, SPSS<br>
-            <strong>Période :</strong> Janvier 2023 – Juin 2023
-        </p>
-        <p>
-            Collecte, nettoyage et modélisation de données issues d'enquêtes terrain en santé reproductive.
-            Analyses statistiques avancées (régression logistique, alpha de Cronbach, khi-deux) et
-            visualisation des indicateurs clés pour appuyer la prise de décision opérationnelle.
-        </p>
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a><span>›</span>
+        <a href="index.html#projets">Projets</a><span>›</span>
+        <span class="current">Projets data</span>
+      </nav>
+      <h1>Projets data</h1>
+      <p>Analyses statistiques, visualisation et solutions décisionnelles</p>
     </div>
+  </div>
 
-    <div class="timeline-item">
-        <h3>Développement de dashboards décisionnels</h3>
-        <p>
-            <strong>Rôle :</strong> Concepteur Data &amp; Visualisation<br>
-            <strong>Domaine :</strong> Suivi-évaluation de projets<br>
-            <strong>Outils :</strong> Power BI, Excel avancé, Tableau<br>
-            <strong>Période :</strong> Septembre 2023 – Mars 2024
-        </p>
-        <p>
-            Conception de tableaux de bord interactifs pour le suivi en temps réel des indicateurs
-            stratégiques de projets. Automatisation des rapports périodiques pour les partenaires
-            et bailleurs de fonds. Intégration des données de terrain via KoboCollect.
-        </p>
+  <main id="contenu">
+    <div class="container">
+      <div class="timeline-v">
+
+        <div class="timeline-v-item">
+          <h3>Intelligence d'affaires et analytique des données – Contexte santé (CISSS)</h3>
+          <p><strong>Rôle :</strong> Apprenant / Analyste &nbsp;·&nbsp; <strong>Période :</strong> 2025 – En cours</p>
+          <p><strong>Outils :</strong> Microsoft Fabric · Power BI · Power Platform · ETL/ELT · Lakehouse (Médaillon Bronze/Silver/Gold)</p>
+          <p>Développement de compétences avancées en intelligence d'affaires appliquées au secteur de la santé. Travail sur des mises en situation complexes inspirées du contexte des CISSS au Québec : performance organisationnelle, suivi des indicateurs cliniques et opérationnels, centralisation et standardisation des données provenant de multiples systèmes d'information.</p>
+          <p>Apprentissages couvrant l'architecture Lakehouse (Médaillon), la gouvernance et traçabilité des données, les processus ETL/ELT, la modélisation orientée décision, et la conception de KPIs pour l'amélioration continue.</p>
+        </div>
+
+        <div class="timeline-v-item">
+          <h3>Conception de formulaire de collecte de données – KoboToolbox</h3>
+          <p><strong>Source :</strong> KoboToolbox &nbsp;·&nbsp; <strong>Lien :</strong> <a href="https://ee.kobotoolbox.org/x/FDbgAPzV" target="_blank" rel="noopener noreferrer">Ouvrir le formulaire</a></p>
+          <p>Formulaire illustratif des outils de collecte de données professionnels que je conçois sur KoboToolbox pour les projets de santé et de développement. Cliquez sur le lien pour explorer le formulaire en ligne.</p>
+        </div>
+
+        <div class="timeline-v-item">
+          <h3>Analyse statistique des indicateurs SSR – Niger</h3>
+          <p><strong>Rôle :</strong> Data Analyst &nbsp;·&nbsp; <strong>Pays :</strong> Niger &nbsp;·&nbsp; <strong>Période :</strong> Janvier 2023 – Juin 2023</p>
+          <p><strong>Outils :</strong> R, Python, Power BI, SPSS</p>
+          <p>Collecte, nettoyage et modélisation de données issues d'enquêtes terrain en santé reproductive. Analyses statistiques avancées (régression logistique, alpha de Cronbach, khi-deux) et visualisation des indicateurs clés pour appuyer la prise de décision opérationnelle.</p>
+        </div>
+
+        <div class="timeline-v-item">
+          <h3>Développement de dashboards décisionnels</h3>
+          <p><strong>Rôle :</strong> Concepteur Data &amp; Visualisation &nbsp;·&nbsp; <strong>Période :</strong> Septembre 2023 – Mars 2024</p>
+          <p><strong>Outils :</strong> Power BI, Excel avancé, Tableau</p>
+          <p>Conception de tableaux de bord interactifs pour le suivi en temps réel des indicateurs stratégiques de projets. Automatisation des rapports périodiques pour les partenaires et bailleurs de fonds. Intégration des données de terrain via KoboCollect.</p>
+        </div>
+
+        <div class="timeline-v-item">
+          <h3>Analyse EDS – Contraception et richesse au Bénin</h3>
+          <p><strong>Rôle :</strong> Statisticien / Co-auteur &nbsp;·&nbsp; <strong>Période :</strong> 2024 – 2025</p>
+          <p><strong>Données :</strong> Enquête Démographique et de Santé 2017-2018 &nbsp;·&nbsp; <strong>Outils :</strong> R, Stata</p>
+          <p>Exploitation des données EDS Bénin pour analyser l'effet de l'indice de richesse combiné sur l'utilisation des méthodes contraceptives modernes. Modèles de régression linéaire multivariée avec contrôle de l'âge, de l'éducation et de la religion du partenaire. Résultats publiés sur ResearchGate.</p>
+          <a href="https://www.researchgate.net/publication/392132353" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Voir la publication</a>
+        </div>
+
+      </div>
     </div>
+  </main>
 
-    <div class="timeline-item">
-        <h3>Analyse EDS – Contraception et richesse au Bénin</h3>
-        <p>
-            <strong>Rôle :</strong> Statisticien / Co-auteur<br>
-            <strong>Données :</strong> Enquête Démographique et de Santé 2017-2018<br>
-            <strong>Outils :</strong> R, Stata<br>
-            <strong>Période :</strong> 2024 – 2025
-        </p>
-        <p>
-            Exploitation des données EDS Bénin pour analyser l'effet de l'indice de richesse
-            combiné sur l'utilisation des méthodes contraceptives modernes. Modèles de régression
-            linéaire multivariée avec contrôle de l'âge, de l'éducation et de la religion du partenaire.
-            Résultats publiés sur ResearchGate.
-        </p>
-        <a href="https://www.researchgate.net/publication/392132353" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-external-link-alt"></i> Voir la publication
-        </a>
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">&#8679;</button>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Alphonse Euphrème Ahlou</p>
+      <a href="index.html">Retour à l'accueil</a>
     </div>
-
-</section>
-
-</main>
-
-<div class="visit-counter">
-    <span>👁 Visites : </span>
-    <img src="https://aahlou.goatcounter.com/counter/%2Fprojets-data.svg" alt="Nombre de visites">
-</div>
-<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">&#8679;</button>
-
-<footer><p>© 2026 Alphonse Euphrème Ahlou</p></footer>
-
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

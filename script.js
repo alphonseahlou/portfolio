@@ -1,90 +1,65 @@
-// Gère l'ouverture et la fermeture du menu mobile
-function toggleNav(btn) {
-    const ul = document.getElementById('main-nav');
-    if (!ul) return;
-
-    const isOpen = ul.classList.toggle('open');
-    const icon = btn.querySelector('.icon');
-    if (icon) {
-        icon.classList.toggle('fa-bars', !isOpen);
-        icon.classList.toggle('fa-times', isOpen);
-    }
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+// Menu mobile
+const toggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('#nav-links');
+if (toggle && links) {
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
 }
 
-// Ferme le menu mobile et remet l'icône dans son état initial
-function closeNav() {
-    const ul = document.getElementById('main-nav');
-    if (!ul) return;
-
-    ul.classList.remove('open');
-    const icon = document.querySelector('.nav-toggle .icon');
-    const btn = document.querySelector('.nav-toggle');
-    if (icon) {
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
-    }
-    if (btn) {
-        btn.setAttribute('aria-expanded', 'false');
-    }
+// Recherche
+function portfolioSearch(event) {
+  event.preventDefault();
+  const input = document.querySelector('#site-search');
+  const query = input.value.trim().toLowerCase();
+  document.querySelectorAll('.search-hit').forEach((el) => el.classList.remove('search-hit'));
+  if (!query) return false;
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  const match = sections.find((s) => s.innerText.toLowerCase().includes(query));
+  if (match) {
+    match.classList.add('search-hit');
+    match.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.setTimeout(() => match.classList.remove('search-hit'), 2200);
+  } else {
+    input.value = '';
+    input.placeholder = 'Aucun résultat trouvé';
+  }
+  return false;
 }
 
-// Affiche ou masque les résumés des mémoires / articles
+// Toggle résumé des publications
 function toggleAbstract(id, btn) {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    const isOpen = el.classList.toggle('open');
-    btn.textContent = isOpen ? 'Réduire' : 'Lire plus ↓';
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  const el = document.getElementById(id);
+  const open = el.classList.toggle('open');
+  btn.textContent = open ? 'Réduire ↑' : 'Lire le résumé ↓';
+  btn.setAttribute('aria-expanded', String(open));
 }
 
-// Initialise l'état accessible des boutons de lecture des résumés
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.toggle-abstract').forEach(function (btn) {
-        btn.setAttribute('aria-expanded', 'false');
-    });
-
-    initBackToTop();
-    initActiveNav();
-});
-
-// Bouton retour en haut
-function initBackToTop() {
-    const btn = document.getElementById('back-to-top');
-    if (!btn) return;
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 400) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
-        }
-    }, { passive: true });
-
-    btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+// Back to top
+const backBtn = document.getElementById('back-to-top');
+if (backBtn) {
+  window.addEventListener('scroll', () => {
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// Mise en évidence du lien nav correspondant à la section visible (index.html uniquement)
-function initActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
-    if (!sections.length) return;
+// Lien nav actif selon la section visible
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+const sections = document.querySelectorAll('main section[id]');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navLinks.forEach((a) => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -50% 0px' });
 
-    const navLinks = document.querySelectorAll('#main-nav a[href^="#"], #main-nav a[href*="index.html#"]');
-    if (!navLinks.length) return;
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            navLinks.forEach(function (link) {
-                const href = link.getAttribute('href') || '';
-                const sectionId = href.split('#')[1];
-                link.classList.toggle('active', sectionId === entry.target.id);
-            });
-        });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(function (s) { observer.observe(s); });
-}
+sections.forEach((s) => observer.observe(s));
