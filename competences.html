@@ -11,42 +11,10 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://alphonseahlou.github.io/portfolio/competences.html">
   <meta name="theme-color" content="#17324d">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
-
-  <header class="site-header">
-    <div class="govbar">
-      <div class="container govbar-inner">
-        <span>Portfolio professionnel</span>
-        <span>Santé publique · Évaluation · Coopération internationale</span>
-      </div>
-    </div>
-    <div class="brand-compact container">
-      <a class="brand-mark" href="index.html" aria-label="Accueil">
-        <span class="brand-symbol">AEA</span>
-        <span>
-          <strong>Alphonse Euphrème Ahlou</strong>
-          <small>Expert en santé publique internationale</small>
-        </span>
-      </a>
-    </div>
-    <nav class="main-nav" aria-label="Navigation">
-      <div class="container nav-inner">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-        <ul id="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#domaines">← Domaines</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <site-header section="domaines"></site-header>
 
   <div class="page-hero">
     <div class="container">
@@ -130,7 +98,7 @@
             <li>Architecture Lakehouse — Médaillon (Bronze / Silver / Gold)</li>
             <li>Processus ETL/ELT et intégration de données multisources</li>
             <li>Modélisation de données orientée décision</li>
-            <li>KPIs et tableaux de bord pour CISSS et réseau de santé</li>
+            <li>KPIs et tableaux de bord pour les systemes de santé</li>
             <li>Gouvernance, qualité et traçabilité des données</li>
           </ul>
         </div>
@@ -154,13 +122,8 @@
     </div>
   </main>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">&#8679;</button>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Alphonse Euphrème Ahlou</p>
-      <a href="index.html">Retour à l'accueil</a>
-    </div>
-  </footer>
+  <site-footer></site-footer>
+  <script src="site-components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

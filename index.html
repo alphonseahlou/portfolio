@@ -46,60 +46,10 @@
   <!-- Analytics -->
   <script data-goatcounter="https://aahlou.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-  <!-- Polices : Playfair Display (titres) + Inter (corps) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icônes Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
-
-  <header class="site-header">
-    <div class="govbar">
-      <div class="container govbar-inner">
-        <span>Portfolio professionnel</span>
-        <span>Santé publique · Évaluation · Coopération internationale</span>
-      </div>
-    </div>
-
-    <div class="brand container">
-      <a class="brand-mark" href="#accueil" aria-label="Accueil">
-        <span class="brand-symbol">AEA</span>
-        <span>
-          <strong>Alphonse Euphrème Ahlou</strong>
-          <small>Expert en santé publique internationale</small>
-        </span>
-      </a>
-      <form class="search" role="search" onsubmit="return portfolioSearch(event)">
-        <label for="site-search">Recherche</label>
-        <div class="search-row">
-          <input id="site-search" type="search" placeholder="Rechercher une expertise, un projet, une publication">
-          <button type="submit" aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
-        </div>
-      </form>
-    </div>
-
-    <nav class="main-nav" aria-label="Navigation principale">
-      <div class="container nav-inner">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-        <ul id="nav-links">
-          <li><a href="#apropos">L'expert</a></li>
-          <li><a href="#domaines">Domaines</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="diplomes.html">Diplômes</a></li>
-          <li><a href="formation-continue.html">Certifications</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <site-header page="home"></site-header>
 
   <main id="contenu">
 
@@ -390,26 +340,30 @@
         <p class="section-label">Engagement</p>
         <h2>Organisations membres</h2>
         <div class="orgs-strip">
-          <div class="org-logo">
+          <a class="org-logo" href="https://precrisa.ca/" target="_blank" rel="noopener noreferrer">
             <img src="Precrisa.png" alt="Précrisa – Réseau de prévention des crises en santé">
             <span>Précrisa</span>
-          </div>
-          <div class="org-logo">
+          </a>
+          <a class="org-logo" href="https://anarpi.health.blog/" target="_blank" rel="noopener noreferrer">
             <img src="Anarpi.png" alt="ANaRPI – Association Nationale pour la Relève de la Profession Infirmière">
             <span>ANaRPI</span>
-          </div>
-          <div class="org-logo">
+          </a>
+          <a class="org-logo" href="https://yali.state.gov/" target="_blank" rel="noopener noreferrer">
             <img src="Yali Dakar.png" alt="YALI – Young African Leaders Initiative">
             <span>YALI</span>
-          </div>
-          <div class="org-logo">
+          </a>
+          <a class="org-logo" href="https://www.facebook.com/wewomen1" target="_blank" rel="noopener noreferrer">
             <img src="we women.png" alt="We Women">
             <span>We Women</span>
-          </div>
-          <div class="org-logo">
+          </a>
+          <a class="org-logo" href="https://www.facebook.com/Yoursolutionofficielle" target="_blank" rel="noopener noreferrer">
             <img src="Your Solution.png" alt="Your Solution – La psychologie au service du développement">
             <span>Your Solution</span>
-          </div>
+          </a>
+          <a class="org-logo" href="https://www.acfas.ca/" target="_blank" rel="noopener noreferrer">
+            <img src="acfas.png" alt="ACFAS – Association francophone pour le savoir">
+            <span>ACFAS</span>
+          </a>
         </div>
       </div>
     </section>
@@ -454,21 +408,9 @@
 
   </main>
 
-  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">&#8679;</button>
+  <site-footer home></site-footer>
 
-  <div class="visit-counter">
-    <i class="fas fa-eye"></i>
-    <span>Visites : </span>
-    <img src="https://aahlou.goatcounter.com/counter/%2Fportfolio.svg" alt="Nombre de visites">
-  </div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Alphonse Euphrème Ahlou</p>
-      <a href="#accueil">Retour en haut</a>
-    </div>
-  </footer>
-
+  <script src="site-components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

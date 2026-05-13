@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
 :root {
   --ink:       #17324d;
   --ink-2:     #274b68;
@@ -18,6 +21,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+site-header, site-footer { display: block; }
 
 body {
   margin: 0;
@@ -111,6 +115,7 @@ h3 { color: var(--ink); margin: 0 0 10px; line-height: 1.3; }
 .identity-panel { background: var(--paper); border-top: 6px solid var(--yellow); padding: 22px; box-shadow: 0 10px 30px rgba(23, 50, 77, .12); transition: transform var(--transition); }
 .identity-panel:hover { transform: translateY(-4px); }
 .identity-panel img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; margin-bottom: 18px; }
+.identity-panel div { text-align: center; }
 .identity-panel h2 { font-size: 20px; margin-bottom: 8px; }
 
 /* ---- Quick links ---- */
@@ -323,7 +328,8 @@ time { color: var(--teal-dark); font-size: 22px; font-weight: 800; font-family: 
 .parcours-arrow { margin-left: auto; color: var(--teal-dark); flex-shrink: 0; }
 
 /* ---- Sous-pages : brand compact ---- */
-.brand-compact { display: flex; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.brand-compact { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.brand-compact .search { width: min(420px, 42vw); min-width: 260px; }
 
 /* ---- Sous-pages : page hero ---- */
 .page-hero { background: var(--mist); border-bottom: 4px solid var(--teal); padding: 36px 0; }
@@ -439,6 +445,8 @@ time { color: var(--teal-dark); font-size: 22px; font-weight: 800; font-family: 
   .brand-symbol { width: 52px; height: 52px; font-size: 14px; }
 
   /* Brand compact (sous-pages) */
+  .brand-compact { flex-direction: column; align-items: flex-start; }
+  .brand-compact .search { width: 100%; min-width: 0; }
   .brand-compact .brand-mark strong { font-size: 15px; }
   .brand-compact .brand-mark small { font-size: 11px; }
   .brand-compact .brand-symbol { width: 44px; height: 44px; font-size: 12px; }
